@@ -1,0 +1,57 @@
+{
+	"name": "actor-WebhookAction",
+	"version": "0.5.0",
+	"description": "Triggers a webhook",
+	"keywords": "Fabrica-IO, actor, webhook",
+	"repository":
+	{
+	  "type": "git",
+	  "url": "https://github.com/FabricaIO/actor-WebhookAction.git"
+	},
+	"authors":
+	[
+	  {
+		"name": "Sam Groveman",
+		"email": "SamGroveman@outlook.com",
+		"url": "https://github.com/FabricaIO"
+	  }
+	],
+	"dependencies": {
+		"Webhook": "https://github.com/FabricaIO/util-Webhook"
+	  },
+	"license": "GPLv3",
+	"homepage": "https://github.com/FabricaIO",
+	"frameworks": "arduino",
+	"platforms": "*",
+	"fabrica-io" : {
+		"name": "Hook",
+		"type": 1,
+		"category": "webhook",
+		"libname": "WebhookAction",
+		"includes": ["WebhookAction"],
+		"description": "Triggers a webhook",
+		"constructor":
+		[
+			[
+				{
+					"name": "Url",
+					"type": "String",
+					"description": "URL to send the webhook to",
+					"default": "http://127.0.0.1"
+				},
+				{
+					"name": "customHeaders",
+					"type": "std::map<String, String>",
+					"description": "Custom HTTP Headers",
+					"default": "{}"
+				},
+				{
+					"name": "configFile",
+					"type": "String",
+					"description": "The name of the config file",
+					"default": "Hook.json"
+				}
+			]
+		]
+	}
+  }
