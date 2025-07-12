@@ -24,7 +24,7 @@
 	"frameworks": "arduino",
 	"platforms": "*",
 	"fabricaio" : {
-		"name": "WebHook",
+		"name": "Hook",
 		"type": 1,
 		"category": "webhook",
 		"libname": "WebhookAction",
@@ -49,7 +49,7 @@
 					"name": "configFile",
 					"type": "String",
 					"description": "The name of the config file",
-					"default": "Webhook.json"
+					"default": "Hook.json"
 				}
 			]
 		]
