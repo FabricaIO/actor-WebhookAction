@@ -12,7 +12,6 @@ WebhookAction::WebhookAction(String Name, String Url, std::map<String, String> c
 /// @return True on success
 bool WebhookAction::begin() {
 	// Set description
-	Description.actionQuantity = 1;
 	Description.type = "webhook";
 	Description.actions = {{"Fire Webhook", 0}};
 	// Create settings if necessary
