@@ -29,7 +29,7 @@ bool WebhookAction::begin() {
 /// @param action The action to process (only option is 0 for fire webhook)
 /// @param payload The content body to send
 /// @return JSON response with OK
-std::tuple<bool, String> WebhookAction::receiveAction(int action, String payload) {
+std::pair<bool, String> WebhookAction::receiveAction(const int action, const String& payload) {
 	String response = R"({"success": false, "Response": "bad command"})";
 	if (action == 0) {
 		response = callHook(payload);

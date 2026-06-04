@@ -16,7 +16,7 @@ class WebhookAction : public Actor {
 	public:
 		WebhookAction(String Name, String url, std::map<String, String> customHeaders = {}, String configFile = "Hook.json");
 		bool begin();
-		std::tuple<bool, String> receiveAction(int action, String payload = "");
+		std::pair<bool, String> receiveAction(const int action, const String& payload = "");
 		String getConfig();
 		bool setConfig(String config, bool save);
 
